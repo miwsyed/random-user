@@ -1,10 +1,9 @@
 import axios from "axios";
 import React, { useState, useCallback, memo, useEffect, Fragment } from "react";
-import "./images.css";
+import "./Home.css";
 
 const Home = () => {
   const [profile, setProfile] = useState([]);
-  const [activeProfile, setActiveProfile] = useState(false);
   const [activeLink, SetActivelink] = useState(0);
 
   const GetData = useCallback(async () => {
@@ -16,9 +15,6 @@ const Home = () => {
       })
       .catch((error) => {
         console.log(error);
-      })
-      .finally(() => {
-        setActiveProfile(true);
       });
   }, []);
 
